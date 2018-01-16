@@ -1,3 +1,2 @@
-export function getName (): string {
-  return `od-express-mysql`
-}
+export * from './mysql'
+export * from './utils'
