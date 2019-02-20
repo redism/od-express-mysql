@@ -1,6 +1,6 @@
 {
   "name": "od-express-mysql",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Simple mysql express middleware for easy reuse in odcode.com",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -13,8 +13,8 @@
     "test": "jest --forceExit --coverage --verbose test/*",
     "test:watch": "jest --forceExit --coverage --verbose --watch test/*",
     "test:debug": "node --inspect=55555 ./node_modules/.bin/jest --forceExit --verbose --no-cache --watch test",
-    "tslint": "tslint -c tslint.json -p tsconfig.json",
-    "prepublish": "npm run clean && npm run tslint && npm run test && npm run build"
+    "prepublish": "npm run clean && npm run tslint && npm run test && npm run build",
+    "tslint": "tslint -c tslint.json -p tsconfig.json"
   },
   "keywords": [],
   "author": "redism@gmail.com",
@@ -28,6 +28,7 @@
     "eslint": "4.15.0",
     "express": "4.16.2",
     "jest": "22.0.4",
+    "mysql": "2.16.0",
     "supertest": "3.0.0",
     "ts-jest": "22.0.1",
     "ts-node": "4.1.0",
@@ -36,7 +37,9 @@
     "typescript": "2.6.2"
   },
   "dependencies": {
-    "knex": "0.14.2",
-    "mysql": "2.15.0"
+    "knex": "0.14.2"
+  },
+  "peerDependencies": {
+    "mysql": "^2.16.0"
   }
 }

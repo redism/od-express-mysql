@@ -110,7 +110,7 @@ export class ODMySQLContext {
               })
             },
             rollback: async () => {
-              assert(this.inTransaction, `Not in a transaction. commit() failed.`)
+              assert(this.inTransaction, `Not in a transaction. rollback() failed.`)
               return new Promise(resolve => {
                 conn.rollback(() => {
                   this.inTransaction = false
